@@ -17,6 +17,23 @@ app.get('/', (req,res) =>{
     res.send('Api is working')
 })
 
+//database connection 
+mongoose.set('strictQuery', false)
+const connectDB = async() => {
+    try {
+        await mongoose.connect(process.env.MONGO_URI,{
+            useNewUrlParser:true,
+            useUnifiedTopology:true
+        })
+
+        console.log('MongoDB is connected :D')
+    } catch (error) {
+        console.log('Mongo database connection failed')
+    }
+}
+
+// PORT LISTENER 
 app.listen(port, () =>{
+    connectDB()
     console.log(`server is running on port ${port} :D`)
 })
