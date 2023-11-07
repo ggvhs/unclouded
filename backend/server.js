@@ -13,11 +13,16 @@ const corsOptions = {
     origin:true
 }
 
+// MIDDLEWARE ADDED 
+app.use(express.json())
+app.use(cookieParser())
+app.use(cors(corsOptions))
+
 app.get('/', (req,res) =>{
     res.send('Api is working')
 })
 
-//database connection 
+//DATABASE CONNECTION 
 mongoose.set('strictQuery', false)
 const connectDB = async() => {
     try {
