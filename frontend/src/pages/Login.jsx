@@ -5,6 +5,13 @@ export default function Login(){
         <>
         <Header />
         <h2>Login</h2>
+
+        <div>
+            <form action="">
+                <input type="text" placeholder="enter email"/>
+                <input type="text" placeholder="enter password" />
+            </form>
+        </div>
         </>
     )
 }
