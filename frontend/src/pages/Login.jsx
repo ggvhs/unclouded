@@ -9,8 +9,9 @@ export default function Login(){
 
         <div className="login-box">
             <form action="">
-                <input type="text" placeholder="enter email"/>
-                <input type="text" placeholder="enter password" />
+                <input type="text" placeholder="enter email" className="login-box-items"/>
+                <input type="text" placeholder="enter password" className="login-box-items"  />
+                <button className="login-box-items">LOGIN</button>
             </form>
         </div>
         </>
