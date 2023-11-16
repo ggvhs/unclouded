@@ -16,5 +16,14 @@
 }
 
 .login-box-items{
-    display:flex
+    display:flex;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+
+.login-box-divs{
+    display:flex;
+    padding: 10px 0px;
+    text-align: center;
 }
